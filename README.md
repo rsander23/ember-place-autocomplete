@@ -19,14 +19,16 @@ In order to use this addon you just have to use the component in your templates.
 ```js
 
 {{place-autocomplete-field
-  value= model.address
+  value=model.address
   disable=false
-  handlerController= this
-  inputClass= 'place-autocomplete--input'
+  handlerController=this
+  inputClass='place-autocomplete--input'
   focusOutCallback='done' //Name of the action in the controller
   placeChangedCallback='placeChanged' //Name of the action in the controller
   types='(cities)' //You don't have to pass this value, default value is 'geocode'
-  restricctions= restrictionsObjectFromController // You can pass and object with restriction options.
+  restrictions=restrictionsObjectFromController // You can pass and object with restriction options.
+  id=id
+  placeholder=placeholder
 }}
 
 ```
