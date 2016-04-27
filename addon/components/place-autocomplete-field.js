@@ -46,8 +46,7 @@ export default Component.extend({
       let actionName = this.get(callback);
       if (isPresent(this.get('handlerController')) && isPresent(actionName)) {
         this.get('handlerController').send(actionName, place);
-        // Clicking on the auto-complete result does NOT update this.value - Ember 2.4.1
-        this.set('value', Ember.$('input').val());
+        this.set('value', Ember.$('.place-autocomplete--input').val());
       }
     }
   },
