@@ -28,6 +28,8 @@ In order to use this addon you just have to use the component in your templates.
   types='(cities)' //You don't have to pass this value, default value is 'geocode'
   restrictions=restrictionsObjectFromController // You can pass and object with restriction options.
   id=id
+  lat=lat //Latitude-name of the property in the controller
+  lng=lng //Longitude-name of the property in the controller
   placeholder=placeholder
 }}
 
