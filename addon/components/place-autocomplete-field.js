@@ -40,6 +40,10 @@ export default Component.extend({
   _callCallback(callback) {
     let callbackFn = this.attrs[callback];
     let place      = this.get('autocomplete').get('place');
+    if (place) {
+      this.set('lat', place.geometry.location.lat());
+      this.set('lng', place.geometry.location.lng());
+    }
     if (isEqual(typeOf(callbackFn), 'function')) {
       callbackFn(place);
     } else {
