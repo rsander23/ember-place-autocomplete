@@ -1,4 +1,10 @@
 {{#if hasBlock}}
+  {{input value=value
+          classBinding="inputClass"
+          tabindex=tabindex
+          disabled=disabled
+          focus-out='focusOut'
+          placeholder=placeholder}}
   {{yield}}
 {{else}}
   {{input value=value
